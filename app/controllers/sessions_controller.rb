@@ -3,8 +3,8 @@ class SessionsController < ApplicationController
   end
   
   def create
-    user = User.find_by(session_params)
-    if user && user.authenticate(session_params)
+    user = User.find_by(email_params)
+    if user && user.authenticate(password_params)
       log_in user
       redirect_to root_path, success: 'ログインに成功しました'
     else
@@ -28,8 +28,12 @@ class SessionsController < ApplicationController
     @current_user = nil
   end
   
-  def session_params
-    params.require(:session). permit(:email, :password)
+  def email_params
+    params.require(:session). permit(:email)
+  end
+  
+  def password_params
+    params.require(:session). permit(:password)
   end
   
 end
