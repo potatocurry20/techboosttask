@@ -6,4 +6,11 @@ class Topic < ApplicationRecord
   belongs_to :user
   
   mount_uploader :image, ImageUploader
+  has_many :favorites
+  has_many :favorite_users, through: :favorites, source: 'user'
+  
+  #topicに紐づくコメントが複数存在する
+  #topicのcommentに紐づくuserが複数存在する
+  has_many :comments
+  has_many :comment_users, through: :comment, source: 'user'
 end

@@ -108,7 +108,7 @@ h1, h2{
 .topic-index-wrapper{
   padding-top: 70px;
   background-color: #fafafa;
-  .top-index-single{
+  .topic-index-single{
     background-color: #fff;
     padding-top: 20px;
     padding-bottom: 20px;
@@ -121,7 +121,26 @@ h1, h2{
     }
     
     .topic-text{
-      
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+    
+    img{
+      margin-top: 10px;
+      margin-bottom: 20px;
+      width: 100%;
+    }
+    
+    .topic-index-icon{
+      width: 35px;
+      height: 30px;
+      margin-left: 20px;
+    }
+    
+    .comment-title{
+      padding-right: 20px;
+      padding-left: 20px;
+      font-size: 20px;
     }
   }
 }
