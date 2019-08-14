@@ -50,5 +50,8 @@ test:
 production:
   <<: *default
   adapter: postgresql
+  #postgreSQLのデータベースに接続します。
   encoding: unicode
+  #unicodeという文字コードを使用します。
   pool: 5
+  #DBに接続できる上限の数を決めます。
